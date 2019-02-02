@@ -2,31 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a074f58-155d-49d0-a307-c6c546d9b09f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../C++/Array/1-A+B/best.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Array/1-A+B/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Array/11-Container With Most Water/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Array/3sum/best.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Array/3sum/better.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Array/3sum/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Array/3sum/othersBest.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Array/3sumClosest/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Array/Missing Number/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Array/Missing Number/othersBest.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Array/findMedianSortedArray/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Linkedlist/2-A+B-Polynomial/bset.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Linkedlist/2-A+B-Polynomial/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Number/7-reverseInteger/better.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Number/7-reverseInteger/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Number/9-parlindromeNumber/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/Number/singleNumber/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/String/3-maxSubString/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/String/5-longestParlindrome/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/String/6-zigZagConversion/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/String/953-isAlienSorted/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/String/953-isAlienSorted/othersBest.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/String/longestCommonPrefix/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/String/regexp/naive.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C++/String/validParentheses/naive.cpp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PlusOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java/JumpGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java/JumpGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java/JumpGame2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java/JumpGame2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java/JumpGameRecursive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java/JumpGameRecursive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JumpGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JumpGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JumpGame2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JumpGame2.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,21 +18,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JumpGame2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/JumpGame.java">
+        <entry file="file://$PROJECT_DIR$/src/LetterCasePermutation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="69" column="44" lean-forward="true" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
+            <state relative-caret-position="332">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,6 +62,15 @@
         <option value="$PROJECT_DIR$/src/NSum.java" />
         <option value="$PROJECT_DIR$/src/FourSum.java" />
         <option value="$PROJECT_DIR$/src/JumpGame.java" />
+        <option value="$PROJECT_DIR$/src/JumpGame2.java" />
+        <option value="$PROJECT_DIR$/src/UniquePaths2.java" />
+        <option value="$PROJECT_DIR$/src/SpiralMatrix2.java" />
+        <option value="$PROJECT_DIR$/src/MinimumPathSum.java" />
+        <option value="$PROJECT_DIR$/src/PlusOne.java" />
+        <option value="$PROJECT_DIR$/src/SetMatrixZeroes.java" />
+        <option value="$PROJECT_DIR$/src/Search2DMatrix.java" />
+        <option value="$PROJECT_DIR$/src/Subsets.java" />
+        <option value="$PROJECT_DIR$/src/LetterCasePermutation.java" />
       </list>
     </option>
   </component>
@@ -105,12 +87,15 @@
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -123,21 +108,33 @@
               <item name="Java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="JumpGame.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="JumpGame2.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548692112878" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549101250131" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -151,37 +148,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JumpGame">
-    <configuration name="FirstMissingPositive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FirstMissingPositive" />
+  <component name="RunManager" selected="Application.LetterCasePermutation">
+    <configuration name="LetterCasePermutation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LetterCasePermutation" />
       <module name="Java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FourSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FourSum" />
+    <configuration name="PlusOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PlusOne" />
       <module name="Java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JumpGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JumpGame" />
+    <configuration name="Search2DMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Search2DMatrix" />
       <module name="Java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="NSum" />
+    <configuration name="SetMatrixZeroes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SetMatrixZeroes" />
       <module name="Java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchInsertPosition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SearchInsertPosition" />
+    <configuration name="Subsets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Subsets" />
       <module name="Java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -189,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JumpGame" />
-        <item itemvalue="Application.FourSum" />
-        <item itemvalue="Application.NSum" />
-        <item itemvalue="Application.FirstMissingPositive" />
-        <item itemvalue="Application.SearchInsertPosition" />
+        <item itemvalue="Application.LetterCasePermutation" />
+        <item itemvalue="Application.Subsets" />
+        <item itemvalue="Application.Search2DMatrix" />
+        <item itemvalue="Application.SetMatrixZeroes" />
+        <item itemvalue="Application.PlusOne" />
       </list>
     </recent_temporary>
   </component>
@@ -208,45 +205,47 @@
       <option name="presentableId" value="Default" />
       <updated>1548568732602</updated>
       <workItem from="1548568733864" duration="21022000" />
+      <workItem from="1548733036619" duration="124000" />
+      <workItem from="1548733210549" duration="22914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21022000" />
+    <option name="totallyTimeSpent" value="44060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.32923833" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32923833" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23464373" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3992629" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32923833" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,13 +310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JumpGame2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FourSum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -348,8 +340,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JumpGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="69" column="44" lean-forward="true" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
+        <state relative-caret-position="52">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JumpGame2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UniquePaths2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MinimumPathSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlusOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SpiralMatrix2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SetMatrixZeroes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Search2DMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Subsets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="208" column="29" selection-start-line="208" selection-start-column="29" selection-end-line="208" selection-end-column="29" />
+          <folding>
+            <element signature="e#359816#359817#0" expanded="true" />
+            <element signature="e#359856#359857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LetterCasePermutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

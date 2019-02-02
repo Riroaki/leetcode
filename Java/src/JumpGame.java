@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Stack;
 
 class JumpGameRecursive {
     private boolean reachable = false;
@@ -40,31 +39,11 @@ public class JumpGame {
     public boolean canJump(int[] nums) {
         if (nums.length == 0)
             return false;
-        boolean[] visited = new boolean[nums.length];
-        Arrays.fill(visited, false);
-        Stack<Integer> pos = new Stack<>();
-        pos.push(0);
-        visited[0] = true;
-        while (!pos.empty()) {
-            int current = pos.peek();
-            int step = 0;
-            for (; step < nums[current]; step++) {
-                int tmp = current + step;
-                if (tmp >= nums.length - 1)
-                    return true;
-                if (!visited[tmp]) {
-                    pos.push(tmp);
-                    visited[tmp] = true;
-                    break;
-                }
-            }
-            if (step == nums[current]) {
-                int whatever = pos.pop();
-                pos.pop();
-                pos.push(whatever);
-            }
-        }
-        return false;
+        int maxReachable = 0;
+        for (int i = 0; i < nums.length; i++)
+            if (i <= maxReachable && nums[i] + i > maxReachable)
+                maxReachable = nums[i] + i;
+        return maxReachable >= nums.length - 1;
     }
 
     public static void main(String[] args) {

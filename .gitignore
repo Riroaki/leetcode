@@ -3,3 +3,5 @@ vscode/
 .DS_Store
 *.out
 *.out.dSYM
+*.class
+Java/.idea/*
