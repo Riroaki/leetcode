@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="44dd088b-90d3-47a7-ab26-0daa1ef8a40f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java/ContainerWithMostWater.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java/FirstMissingPositive$Interval.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java/FirstMissingPositive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java/FourSum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java/IntegerToRoman.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java/JumpGame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java/JumpGame2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java/JumpGameRecursive.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java/NSum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java/SearchInsertPosition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java/ThreeSumClosest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +12,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Triangle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,6 +44,15 @@
         <option value="$PROJECT_DIR$/src/RemoveDuplicatesFromSortedArray2.java" />
         <option value="$PROJECT_DIR$/src/SearchInRotatedSortedArray2.java" />
         <option value="$PROJECT_DIR$/src/LargestRectangleInHistogram.java" />
+        <option value="$PROJECT_DIR$/src/ConstructBinaryTreeFromPreorderAndInorderTraversal.java" />
+        <option value="$PROJECT_DIR$/src/ConstructBinaryTree.java" />
+        <option value="$PROJECT_DIR$/src/ConstructBinaryTreeFromPreIn.java" />
+        <option value="$PROJECT_DIR$/src/ConstructBinaryTreeFromInPost.java" />
+        <option value="$PROJECT_DIR$/src/PascalTriangle2.java" />
+        <option value="$PROJECT_DIR$/src/SumOfEvenNumbersAfterQueries.java" />
+        <option value="$PROJECT_DIR$/src/IntervalListIntersections.java" />
+        <option value="$PROJECT_DIR$/src/VerticalOrderTraversal.java" />
+        <option value="$PROJECT_DIR$/src/Triangle.java" />
       </list>
     </option>
   </component>
@@ -89,7 +100,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549128467857" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549167989294" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -106,23 +117,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LargestRectangleInHistogram">
-    <configuration name="LargestRectangleInHistogram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LargestRectangleInHistogram" />
+  <component name="RunManager" selected="Application.Triangle">
+    <configuration name="ConstructBinaryTreeFromInPost" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ConstructBinaryTreeFromInPost" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RemoveDuplicatesFromSortedArray2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RemoveDuplicatesFromSortedArray2" />
+    <configuration name="PascalTriangle2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PascalTriangle2" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchInRotatedSortedArray2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SearchInRotatedSortedArray2" />
+    <configuration name="SumOfEvenNumbersAfterQueries" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SumOfEvenNumbersAfterQueries" />
+      <module name="leetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Triangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Triangle" />
+      <module name="leetcode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VerticalOrderTraversal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VerticalOrderTraversal" />
       <module name="leetcode" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,9 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LargestRectangleInHistogram" />
-        <item itemvalue="Application.SearchInRotatedSortedArray2" />
-        <item itemvalue="Application.RemoveDuplicatesFromSortedArray2" />
+        <item itemvalue="Application.Triangle" />
+        <item itemvalue="Application.VerticalOrderTraversal" />
+        <item itemvalue="Application.SumOfEvenNumbersAfterQueries" />
+        <item itemvalue="Application.PascalTriangle2" />
+        <item itemvalue="Application.ConstructBinaryTreeFromInPost" />
       </list>
     </recent_temporary>
   </component>
@@ -146,15 +173,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549103648383</updated>
-      <workItem from="1549103651253" duration="11634000" />
+      <workItem from="1549103651253" duration="21460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11634000" />
+    <option name="totallyTimeSpent" value="21460000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -223,6 +251,67 @@
           <folding>
             <element signature="e#143#144#0" expanded="true" />
             <element signature="e#178#179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConstructBinaryTreeFromInPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConstructBinaryTreeFromPreIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PascalTriangle2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IntervalListIntersections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VerticalOrderTraversal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SumOfEvenNumbersAfterQueries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-242">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Triangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
