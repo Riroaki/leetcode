@@ -2,6 +2,10 @@
 public class LargestRectangleInHistogram {
     // 使用Sort之前：427 ms, faster than 12.19% of Java
     // 使用Sort之后：1 ms, faster than 100.00% of Java
+    // 思路：对于每一段区间，都存在一个最小值
+    // 对于最小值，无非就是三种可能：
+    // 1：要么整段面积最大，2、3：要么最小值左边或者最小值右边（均不包含最小值）的面积最大，采用分治法递归解决；
+    // 遇到有序排列的区间，采用递归会降低效率，于是只要单独计算并且比较就可以
     public int largestRectangleArea(int[] heights) {
         return largestRect(heights, 0, heights.length - 1);
     }
@@ -35,24 +39,24 @@ public class LargestRectangleInHistogram {
         return res;
     }
 
-    // MLE，内存超限
+    // 这是第一反应的做法，MLE内存超限
     public int largestRectangleAreaNaive(int[] heights) {
         int bound = heights.length;
         if (bound == 0) return 0;
         if (bound == 1) return heights[0];
-        // min[i][j] means the min value between i and j.
+        // min[i][j] 是指从i到j的最小值（含i和j）
         int[][] min = new int[bound][bound];
         for (int i = 0; i < bound; i++) {
             min[i][i] = heights[i];
             for (int j = i + 1; j < bound; j++) {
-                min[i][j] = heights[j] < min[i][j - 1] ? heights[j] : min[i][j - 1];
+                min[i][j] = Math.min(heights[j], min[i][j - 1]);
             }
         }
         int res = 0;
         for (int i = 0; i < bound; i++) {
             for (int j = i; j < bound; j++) {
                 int area = min[i][j] * (j - i + 1);
-                if (area > res) res = area;
+                res = Math.max(res, area);
             }
         }
         return res;
