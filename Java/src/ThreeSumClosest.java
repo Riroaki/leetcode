@@ -3,6 +3,7 @@ import java.util.Arrays;
 import static java.lang.Math.abs;
 
 public class ThreeSumClosest {
+    // 双指针法，如果遇到刚好相等就直接返回0。当然可以改写成2sumClosest+3sum的组合形式，不容易出错。
     public int threeSumClosest(int[] nums, int target) {
         if (nums.length < 3)
             return 0;
