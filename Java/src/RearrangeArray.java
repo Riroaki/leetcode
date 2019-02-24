@@ -16,7 +16,19 @@ public class RearrangeArray {
         System.arraycopy(tmp, 0, arr, 0, n);
     }
 
+    static public void rearrangeNaive2(int[] arr) {
+        if (arr == null || arr.length < 4) return;
+        int n = arr.length / 2;
+        // 每次把新的bi换到2*i+1的位置，然后从2*i+1开始到bi往后移位
+        for (int i = 0; i < n; i++) {
+            int tmp = arr[n + i];
+            for (int j = n + i; j > 2 * i + 1; j--) arr[j] = arr[j - 1];
+            arr[2 * i + 1] = tmp;
+        }
+    }
+
     // Method 2: O(n2) time, O(1) space
+    // 比较巧妙，不容易想到。。。我服了这个，其实n2的算法也可以用更简单的思路
     static public void rearrange(int[] arr) {
         int swaps = arr.length / 2 - 1;
         for (int j = arr.length / 2; j < arr.length; j++) {
@@ -32,37 +44,13 @@ public class RearrangeArray {
         }
     }
 
-    // Method 3: O(n log n) time, O(1) space
-    static private void swap(int[] arr, int i, int j) {
-        int tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
-    }
-
-    private void merge(int[] arr, int from, int to) {
-        int n = to - from;
-        if (n < 4) return;
-        if (n == 4) swap(arr, from + 1, to - 2);
-        else {
-            int start1 = n / 4 + from, start2 = n / 2;
-            while (start1 < n / 2) swap(arr, start1++, start2++);
-            merge(arr, from, start1);
-            merge(arr, start1, to);
-        }
-    }
-
-    public void rearrangeMerge(int[] arr) {
-        if (arr == null || arr.length < 2) return;
-        merge(arr, 0, arr.length);
-    }
-
     public static void main(String[] args) {
         int[] a = {1, 3, 5, 7, 2, 4, 6, 8};
-        new RearrangeArray().rearrangeMerge(a);
+        rearrangeNaive2(a);
         System.out.println(Arrays.toString(a));
 
         int[] b = {1, 3, 5, 2, 4, 6};
-        new RearrangeArray().rearrangeMerge(b);
+        rearrangeNaive2(b);
         System.out.println(Arrays.toString(b));
     }
 }

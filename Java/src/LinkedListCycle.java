@@ -10,7 +10,7 @@ public class LinkedListCycle {
         return false;
     }
 
-    // 非常精妙的解，使用O（1）的时间就解决了问题。
+    // 非常精妙的解，使用O（n）的时间就解决了问题。
     // 这里每一次循环，fast都比slow多走一步；如果存在循环，总有一天会出现slow=fast（被追上）
     // 重点在于设置循环的边界条件以执行顺序！
     public boolean hasCycle(ListNode head) {

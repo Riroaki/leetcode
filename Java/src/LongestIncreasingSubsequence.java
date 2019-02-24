@@ -1,43 +1,35 @@
+import java.util.Arrays;
+
 public class LongestIncreasingSubsequence {
+    // n2思路，使用dp，每次都要遍历前面的最大值
     public int lengthOfLISNaive(int[] nums) {
-        int n = nums.length, res = 1;
-        if (n < 2) return n;
+        if (nums == null || nums.length == 0) return 0;
+        int n = nums.length, max = 1;
         int[] dp = new int[n];
-        // dp[i] means the longest length of sub-sequence ending with nums[i].
-        dp[0] = 1;
+        Arrays.fill(dp, 1);
         for (int i = 1; i < n; i++) {
             for (int j = i - 1; j >= 0; j--) {
-                if (nums[j] < nums[i]) {
-                    dp[i] = Math.max(dp[i], dp[j] + 1);
-                }
+                if (nums[i] > nums[j]) dp[i] = Math.max(dp[i], dp[j] + 1);
             }
-            if (dp[i] == 0) dp[i] = 1;
-            res = Math.max(res, dp[i]);
+            max = Math.max(dp[i], max);
         }
-//        System.out.println(Arrays.toString(dp));
-        return res;
+        return max;
     }
 
+    // n lgn思路，记录当前最长LIS，并进行二分查找，更新或者插入元素（在指定位置填入新的数字，更新后必然使队伍更优）
     public int lengthOfLIS(int[] nums) {
-        if (nums == null) return 0;
-        int n = nums.length, res = 1, endIndex = 1;
-        if (n < 2) return n;
-        // dp[i] means the longest length of sub-sequence ending with nums[i].
-        int[] dp = new int[n], ends = new int[n];
-        dp[0] = 1;
-        ends[0] = nums[0];
-        for (int i = 1; i < n; i++) {
-            int low = 0, high = endIndex;
-            while (low < high) {
-                int mid = low + (high - low) / 2;
-                if (nums[i] > ends[mid]) low = mid + 1;
-                else high = mid;
+        if (nums == null || nums.length == 0) return 0;
+        int n = nums.length, index = 0;
+        int[] tails = new int[n];
+        for (int num : nums) {
+            int tmp = Arrays.binarySearch(tails, 0, index, num);
+            if (tmp < 0){
+                tmp = -tmp - 1;// 找不到的话填入在新位置，注意是lower bound+1取负
+                tails[tmp] = num;
             }
-            endIndex = Math.max(endIndex, low);
-            ends[low] = nums[i];
-            dp[i] = low + 1;
+            if (tmp == index) index++;// 更新LIS长度
         }
-        return endIndex + 1;
+        return index;
     }
 
     public static void main(String[] args) {

@@ -47,4 +47,25 @@ public class SlidingWindowMaximum {
         }
         return res;
     }
+
+    // 第三种是最优，使用deque，O(n)时间复杂度
+    // 这是一种叫做monotonic queue单调队列的东西。它的性质：在队尾添加，在队首删除，时刻维护最大值，查询效率O(1)
+    // 顺便一提，deq全称叫做double end queue
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        if (nums == null || nums.length == 0 || nums.length < k) return new int[]{};
+        int n = nums.length;
+        Deque<Integer> maxIndices = new ArrayDeque<>();
+        int[] res = new int[n - k + 1];
+        for (int i = 0; i < n; i++) {
+            // 对新元素，从队尾插入，并将较小元素依次排除
+            while (!maxIndices.isEmpty() && nums[maxIndices.peekLast()] < nums[i])
+                maxIndices.pollLast();
+            maxIndices.offerLast(i);
+            // 对于旧元素，检查是否在窗口外并排除之
+            if (maxIndices.peekFirst() == i - k) maxIndices.pollFirst();
+            // 当大小超过窗口大小，开始记录最大值
+            if (i >= k - 1) res[i - k + 1] = nums[maxIndices.peekFirst()];
+        }
+        return res;
+    }
 }
