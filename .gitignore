@@ -7,3 +7,4 @@ vscode/
 Java/.idea/*
 Java/*.iml
 *.kotlin_module
+old/*
