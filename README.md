@@ -1,3 +1,3 @@
 # leetcode
 
-- Mostly Java
+- Java codes.
