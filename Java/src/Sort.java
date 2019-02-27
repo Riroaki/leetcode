@@ -26,9 +26,9 @@ public class Sort {
     }
 
     private static void main(String[] args) {
-        String[] a = System.in.readStrings();
-        sort(a);
-        assert isSorted(a);
-        show(a);
+//        String[] a = System.in.readAllBytes();
+//        sort(a);
+//        assert isSorted(a);
+//        show(a);
     }
 }

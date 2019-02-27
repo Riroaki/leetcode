@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class BeautifulArrangement {
 /*
    // Naive version: check all arrangements after they are formed;
