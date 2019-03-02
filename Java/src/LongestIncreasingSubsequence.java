@@ -23,7 +23,7 @@ public class LongestIncreasingSubsequence {
         int[] tails = new int[n];
         for (int num : nums) {
             int tmp = Arrays.binarySearch(tails, 0, index, num);
-            if (tmp < 0){
+            if (tmp < 0) {
                 tmp = -tmp - 1;// 找不到的话填入在新位置，注意是lower bound+1取负
                 tails[tmp] = num;
             }

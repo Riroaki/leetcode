@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class OrderOfStack {
     public boolean isLegal(int[] nums) {
         int current = 0, index = 0, n = nums.length;
@@ -5,7 +7,7 @@ public class OrderOfStack {
         while (index < n) {
             while (stack.isEmpty() || stack.peek() < nums[index]) {
                 stack.push(current++);
-                if (current == N)
+                if (current == n)
                     break;
             }
             if (stack.peek() != nums[index])

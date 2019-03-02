@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinaryTreeZigZagLevelOrderTraversal {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
@@ -9,7 +12,7 @@ public class BinaryTreeZigZagLevelOrderTraversal {
         if (root == null)
             return;
         if (res.size() < level + 1)
-            res.add(new ArrayList<Integer>());
+            res.add(new ArrayList<>());
         if (level % 2 == 0)
             res.get(level).add(root.val);
         else

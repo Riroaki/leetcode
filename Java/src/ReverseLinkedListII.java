@@ -59,7 +59,7 @@ public class ReverseLinkedListII {
             return null;
         if (m == n)
             return head;
-        ListNode dummy = ListNode(0), before, curr, next;
+        ListNode dummy = new ListNode(0), before, curr, next;
         dummy.next = head;
         before = dummy;
         for (int i = 0; i < m - 1; i++)
