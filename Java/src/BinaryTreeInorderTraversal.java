@@ -26,7 +26,7 @@ class BinaryTreeInorderTraversal {
 	    // 存下从当前节点到其最左的子树的所有节点
 	    while (root != null) {
 	        roots.push(root);
-		root = root.left;
+		    root = root.left;
 	    }
 	    // 从最左节点开始回溯
 	    root = roots.pop();
