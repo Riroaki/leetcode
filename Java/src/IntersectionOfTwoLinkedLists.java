@@ -2,6 +2,28 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class IntersectionOfTwoLinkedLists {
+    // 更简洁的版本，十分巧妙，让A和B走过了相同的路程
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode a = headA, b = headB, tailA = null, tailB = null;
+        if (headA == null || headB == null)
+            return null;
+        while (a != b) {
+            if (a.next == null) {
+                tailA = a;
+                a = headB;
+            } else
+                a = a.next;
+            if (b.next == null) {
+                tailB = b;
+                b = headA;
+            } else
+                b = b.next;
+            if (tailA != null && tailB != null && tailA != tailB)
+                return null;
+        }
+        return a;
+    }
+
     // O(n)的时间和空间复杂度，使用set
     public ListNode getIntersectionNodeNaive(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) return null;

@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.*;
 
 public class ProfitableSchemes {
 //    private int res, goal, limit;
@@ -40,8 +40,7 @@ public class ProfitableSchemes {
 
             // Deep copy cur into cur2
             for (int jp = 0; jp <= P; ++jp)
-                for (int jg = 0; jg <= G; ++jg)
-                    cur2[jp][jg] = cur[jp][jg];
+                if (G + 1 >= 0) System.arraycopy(cur[jp], 0, cur2[jp], 0, G + 1);
 
             for (int p1 = 0; p1 <= P; ++p1) {  // p1 : the current profit
                 // p2 : the new profit after committing this crime

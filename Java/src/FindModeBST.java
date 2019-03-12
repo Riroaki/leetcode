@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.*;
 
 public class FindModeBST {
     HashMap<Integer, Integer> res;
