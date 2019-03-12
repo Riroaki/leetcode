@@ -4,28 +4,25 @@ import java.util.Collections;
 import java.util.List;
 
 public class Triangle {
-    public int minimumTotal(List<List<Integer>> triangle) {
-        int height = triangle.size();
-        if (height == 0) return 0;
-        // dp[i] means the minimum path to get triangle[level][i]
-        int[] dp = new int[height];
-        dp[0] = triangle.get(0).get(0);
-        for (int level = 1; level < height; level++) {
-            // 这里需要注意的是顺序问题；需要从右到左的赋值（当然，第0个的赋值顺序无所谓）
-            // The last element is only available to the last element on last level.
-            dp[level] = dp[level - 1] + triangle.get(level).get(level);
-            for (int j = level - 1; j > 0; j--) {
-                if (dp[j] <= dp[j - 1]) dp[j] += triangle.get(level).get(j);
-                else dp[j] = dp[j - 1] + triangle.get(level).get(j);
-            }
-            // The first element is only available to the first element on last level.
-            dp[0] += triangle.get(level).get(0);
+    public int minimumTotal(List<List<Integer>> tri) {
+        if (tri.isEmpty())
+            return 0;
+        int row = tri.size(), col = tri.get(row - 1).size();
+        int[] prev = new int[col], curr = new int[col];
+        curr[0] = tri.get(0).get(0);
+        for (int i = 1; i < row; i++) {
+            int[] tmp = curr;
+            curr = prev;
+            prev = tmp;
+            curr[0] = prev[0] + tri.get(i).get(0);
+            for (int j = 1; j < i; j++)
+                curr[j] = Math.min(prev[j - 1], prev[j]) + tri.get(i).get(j);
+            curr[i] = prev[i - 1] + tri.get(i).get(i);
         }
-        int min = dp[0];
-        for (int j = 1; j < height; j++)
-            if (min > dp[j])
-                min = dp[j];
-        return min;
+        int res = Integer.MAX_VALUE;
+        for (int num : curr)
+            res = Math.min(res, num);
+        return res;
     }
 
     public static void main(String[] args) {

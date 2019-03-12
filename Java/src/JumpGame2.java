@@ -15,7 +15,7 @@ class JumpGame2 {
             }
         }
         // System.out.println(minSteps);
-        return minSteps[l - 1];
+        return minSteps[l - 1] == Integer.MAX_VALUE ? -1 : minSteps[l - 1];
     }
 
     // Optimal Greedy algorithm.

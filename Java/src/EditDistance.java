@@ -1,22 +1,23 @@
 public class EditDistance {
-    // 神人啊，巧妙简洁的思路
-    // https://leetcode.com/problems/edit-distance/discuss/237164/Java-Dynamic-programming-with-explaination
-    //First of all, the word1 and word2 are symetric in that the min number of steps to change from word1 to word2 is the same from word2 to word1, so the choice which one is column and which one is row is random.
-    //Create a 2D array dp with word1.length() + 1 and word2.length() + 1, the +1's are meant for empty strings.
-    //Each cell in the dp[i][j] means the minimal steps transforming from word1.substring(0, i) to word2.substring(0, j);
-    //Initialize dp[0][0] with 0, because it takes no change from empty string to empty string.
-    //For zero column, zero row, the values increases with the index because you have to remove k characters to transform a string of k length into an empty string.
-    //For the remaining cells, if the column character i (word1.charAt(i)) and row character j (word2.charAt(j)) are the same, no change is needed, take the number of changes from the previous step ([i-1][j-1]);
-    //If the characters are different, that means we have to either
-        //change a character (dp[i - 1][j -1])
-        //remove a character from word1 dp[i-1][j], or insert one in word2
-        //remove a character from word2 d[i][j-1], or insert one in word1
-    //In these cases, the extra change is one, and we only need to use the min of the three.
-    //When we get to the end, we will have the number of changes that is needed for changing word1 to word2.
+    // 这题在NLP领域很有价值。在add、delete和swap的价值不同的时候就不能简化为O(n)的长度
+        // 我们将问题转化为子问题。
+        // 先考虑一个比较简单的情形，从a变到空字符串需要多少操作次数？自然就是a的长度，要么从a开始删除，要么从空字符串加到a
+        // 我们设dp[i][j]表示s1的前i位到s2的前j位（i和j可以是0，最长位是长度）
+        // 那么，我们有初始条件：dp[i][0] = i, dp[0][j] = j, 0 <= i <= n1, 0 <= j <= n2.
+        // 递归条件：如果s1[i] == s2[j]，那么变化次数dp[i][j] = dp[i - 1][j - 1]
+        // 如果s1[i] != s2[j]，那么我们有三种考虑：
+            // 1，从s1的前i-1串到s2的前j串变化，要么s1加一位（加入s2的j位），要么s2减一位（即j位）；
+            // 2，从s2的前j-1串到s1的前i串变化，要么s2加一位（加入s1的i位），要么s1减一位（即i位）；
+            // 3，s1，s2各加一位。
+        // 而我们就在这三者之间取最小的结果。
+        // 最后结果为dp[n1][n2]
+    
+    // 这一题目的拓展：del，add，swap的权重不同，从a到b（注意，距离是对称的，但是这里不一定是对称的）
+        // 那么有dp[0][0] = 0, dp[i][0] = w(del) + dp[i - 1][0], dp[0][i] = w(add) + dp[0][i - 1]
+        // dp[i][j] = s1[i] == s2[j] ? dp[i - 1][j - 1] : min(dp[i - 1][j] + w(add), min(dp[i][j - 1] + w(del), dp[i - 1][j - 1] + w(swap))).
+    // 这个题目让我想起了生物的碱基配对TACG。。。可以作为一个比较好的应用，用于检测基因变化！
     public int minDistance(String word1, String word2) {
         if (word1 == null || word2 == null) return -1;
-        if (word1.length() == 0) return word2.length();
-        if (word2.length() == 0) return word1.length();
         int l1 = word1.length(), l2 = word2.length();
         int[][] dist = new int[l1 + 1][l2 + 1];
         // dist[i][j]表示的是word1.substring(0, i - 1)和word2.substring(0, j - 1)需要改变的次数

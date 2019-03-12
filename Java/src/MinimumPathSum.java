@@ -1,20 +1,19 @@
 public class MinimumPathSum {
+    // 因为只能从上面或者左侧抵达某个值，所以dp[row][col] = min(dp[row - 1][col], dp[row][col - 1]) + grid[i][j].
     public int minPathSum(int[][] grid) {
-        int width = grid[0].length;
-        int[] pathSum = new int[width];
-        pathSum[0] = grid[0][0];
-        for (int i = 1; i < width; i++)
-            pathSum[i] = pathSum[i - 1] + grid[0][i];
-        for (int row = 1; row < grid.length; row++) {
-            pathSum[0] += grid[row][0];
-            for (int col = 1; col < width; col++) {
-                if (pathSum[col - 1] < pathSum[col])
-                    pathSum[col] = pathSum[col - 1] + grid[row][col];
-                else
-                    pathSum[col] += grid[row][col];
-            }
+        if (grid == null || grid.length == 0 || grid[0].length == 0)
+            return 0;
+        int m = grid.length, n = grid.length;
+        int[] dp = new int[n];
+        dp[0] = grid[0][0];
+        for (int i = 1; i < n; i++)
+            dp[i] = dp[i - 1] + grid[0][i];
+        for (int row = 1; row < m; row++) {
+            dp[0] += grid[row][0];
+            for (int col = 0; col < n; col++)
+                dp[col] = Math.min(dp[col - 1], dp[col]) + grid[row][col];
         }
-        return pathSum[width - 1];
+        return dp[n - 1];
     }
 
     public static void main(String[] args) {
