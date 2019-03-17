@@ -1,65 +1,56 @@
 import java.util.*;
 
 public class ProfitableSchemes {
-//    private int res, goal, limit;
-//    private final int MOD = 1_000_000_007;
-//
-//    private void helper(int currentPeople, int currentProfit, int[] group, int[] profit, int indexOfCrime) {
-//        System.out.println("calling " + currentPeople + " " + currentProfit);
-//        if (currentProfit >= goal)
-//            res++;
-//        if (res >= MOD)
-//            res -= MOD;
-//        if (indexOfCrime >= group.length)
-//            return;
-//        if (currentPeople + group[indexOfCrime] <= limit)
-//            helper(currentPeople + group[indexOfCrime], currentProfit + profit[indexOfCrime], group, profit, indexOfCrime + 1);
-//        helper(currentPeople, currentProfit, group, profit, indexOfCrime + 1);
-//    }
-//
-//    public int profitableSchemes(int G, int P, int[] group, int[] profit) {
-//        res = 0;
-//        goal = P;
-//        limit = G;
-//        helper(0, 0, group, profit, 0);
-//        return res;
-//    }
-
+    // TLE, naive version.
+        // 2^n search space (time complexity).
+    /*
+    private int goal, limit;
+    private long res;
+    private int[] groups, profits;
+    
+    private void helper(int people, int profit, int index) {
+        if (index == groups.length) {
+            if (profit >= goal)
+                res++;
+            return;
+        }
+        if (groups[index] + people <= limit)
+            helper(people + groups[index], profit + profits[index], index + 1);
+        helper(people, profit, index + 1);
+    }
+    
     public int profitableSchemes(int G, int P, int[] group, int[] profit) {
-        int MOD = 1_000_000_007;
-        int N = group.length;
-        long[][][] dp = new long[2][P + 1][G + 1];
-        dp[0][0][0] = 1;
-
-        for (int i = 0; i < N; ++i) {
-            int p0 = profit[i];  // the current crime profit
-            int g0 = group[i];  // the current crime group size
-
-            long[][] cur = dp[i % 2];
-            long[][] cur2 = dp[(i + 1) % 2];
-
-            // Deep copy cur into cur2
-            for (int jp = 0; jp <= P; ++jp)
-                if (G + 1 >= 0) System.arraycopy(cur[jp], 0, cur2[jp], 0, G + 1);
-
-            for (int p1 = 0; p1 <= P; ++p1) {  // p1 : the current profit
-                // p2 : the new profit after committing this crime
-                int p2 = Math.min(p1 + p0, P);
-                for (int g1 = 0; g1 <= G - g0; ++g1) {  // g1 : the current group size
-                    // g2 : the new group size after committing this crime
-                    int g2 = g1 + g0;
-                    cur2[p2][g2] += cur[p1][g1];
-                    cur2[p2][g2] %= MOD;
+        res = 0;
+        goal = P;
+        limit = G;
+        groups = group;
+        profits = profit;
+        helper(0, 0, 0);
+        return (int)(res % 1_000_000_007);
+    }
+    */
+    
+    // 这里是2d的做法。需要reverse looping是因为，我们需要用旧的值更新，而我们更新是用左边的值更新右边的
+        // 如果我们从左往右更新，那么右边的值还没有用于更新就已经被污染；
+        // 从右往左更新就不会出现这样的情况。
+        // 然后这里对方案选取的循环必须放在最外层，因为每个方案只能选一次，放在最外层体天然保证了这一点
+    public int profitableSchemes(int G, int P, int[] group, int[] profit) {
+        int[][] dp = new int[P + 1][G + 1];
+        int MOD = (int)1e9 + 7, res = 0, n = group.length;
+        dp[0][0] = 1;
+        for (int k = 0; k < n; k++) {
+            for (int i = P; i >= 0; i--) {
+                for (int j = G - group[k]; j >= 0; j--) {
+                    if (i + profit[k] < P)
+                        dp[i + profit[k]][j + g] = (dp[i + profit[k]][j + g] + dp[i][j]) % MOD;
+                    else
+                        dp[P][j + g] = (dp[P][j + g] + dp[i][j]) % MOD;
                 }
             }
         }
-
-        // Sum all schemes with profit P and group size 0 <= g <= G.
-        long ans = 0;
-        for (long x : dp[N % 2][P])
-            ans += x;
-
-        return (int) ans;
+        for (int i : dp[P])
+            res = (res + i) % MOD;
+        return res;
     }
 
     public static void main(String[] args) {

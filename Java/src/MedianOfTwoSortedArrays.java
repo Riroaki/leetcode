@@ -1,10 +1,28 @@
 public class MedianOfTwoSortedArrays {
-    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        int index = nums1.length / 2 + nums2.length / 2, num1 = -1, num2 = -1;
-        for (int i = 0, j = 0; i < nums1.length && j < nums1.length; ) {
-
+    // O(n1 + n2) sol. Merge the two arrays.
+    public double findMedianSortedArraysNaive(int[] a, int[] b) {
+        int n1 = a.length, n2 = b.length;
+        int[] c = new int[n1 + n2];
+        int i1 = 0, i2 =  0, i = 0;
+        while (i1 < n1 && i2 < n2) {
+            if (a[i1] < b[i2])
+                c[i++] = a[i1++];
+            else
+                c[i++] = b[i2++];
         }
-        if (nums1.length % 2 + nums2.length % 2 == 1) return num1;
-        return num2;
+        while (i1 < n1)
+            c[i++] = a[i1++];
+        while (i2 < n2)
+            c[i++] = b[i2++];
+        int half = (n1 + n2) / 2;
+        if (half % 2 == 1)
+            return (double)c[half];
+        return (c[half] + c[half - 1]) / 2.0;
+    }
+
+    public double findMedianSortedArrays(int[] a, int[] b) {
+        int n1 = a.length, n2 = b.length;
+        //...
+        return 0.0;
     }
 }

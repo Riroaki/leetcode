@@ -1,16 +1,14 @@
 public class SearchInsertPosition {
     public int searchInsert(int[] nums, int target) {
-        int pos = 0, left = 0, right = nums.length - 1;
-        while (left <= right) {
-            pos = left + (right - left) / 2;
-            if (nums[pos] == target)
-                return pos;
-            if (nums[pos] < target)
-                left = pos + 1;
+        int lo = 0, hi = nums.length;
+        while (lo < hi) {
+            int mi = lo + (hi - lo) / 2;
+            if (nums[mi] < target)
+                lo = mi + 1;
             else
-                right = pos - 1;
+                hi = mi;
         }
-        return left;
+        return lo;
     }
 
     public static void main(String[] args) {

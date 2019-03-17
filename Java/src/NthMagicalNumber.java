@@ -1,19 +1,19 @@
 public class NthMagicalNumber {
     private int gcd(int a, int b) {
-        if (b == 0)
-            return a;
-        return gcd(b, a % b);
+        return b == 0 ? a : gcd(b, a % b);
     }
-    
-    public int nthMagicalNumber(int N, int A, int B) {
-        long c = A * B / gcd(A, B), left = 0, right = Long.MAX_VALUE;
-        while (left < right) {
-            long mid = left + (right - left) / 2;
-            if (mid / A + mid / B - mid / c < N)
-                left = mid + 1;
+
+    public int nthMagicalNumber(int n, int a, int b) {
+        long mcd = a * b / gcd(a, b);
+        long lo = 1, hi = Long.MAX_VALUE;
+        while (lo < hi) {
+            long mi = lo + (hi - lo) / 2;
+            long count = mi / a + mi / b + mi / mcd;
+            if (count < n)
+                lo = mi + 1;
             else
-                right = mid;
+                hi = mi;
         }
-        return (int)(left % 1_000_000_007);
+        return (int)(lo / 1_000_000_007);
     }
 }

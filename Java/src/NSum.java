@@ -3,73 +3,64 @@ import java.util.Arrays;
 import java.util.List;
 
 public class NSum {
-    private int maxSum(int[] nums, int n) {
-        int sum = 0, l = nums.length - 1;
-        for (int i = 0; i < n; i++)
-            sum += nums[l - i];
-        return sum;
+    private int maxSum(int nums[], int n) {
+        int res = 0, len = nums.length;
+        for (int i = 1; i <= n; i++)
+            res += nums[len - i];
+        return res;
     }
-
-    private int minSum(int[] nums, int n, int start) {
-        int sum = 0;
+    
+    private int minSum(int[] nums, int n, int index) {
+        int res = 0;
         for (int i = 0; i < n; i++)
-            sum += nums[start + i];
-        return sum;
+            res += nums[i + index];
+        return res;
     }
-
-    private List<List<Integer>> nSumRecursive(int[] nums, int target, int n, int start) {
+    
+    private List<List<Integer>> nSum(int[] nums, int target, int n, int index) {
+        if (nums.length - index < n || maxSum(nums, n) < target || minSum(nums, n, index) > target)
+            return new ArrayList<>();
         List<List<Integer>> res = new ArrayList<>();
+        int len = nums.length;
+        // 2 sum
         if (n == 2) {
-            int left = start, right = nums.length - 1;
-            while (left < right) {
-                if (nums[left] + nums[right] < target)
+            int lo = index, hi = len - 1;
+            while (lo < hi) {
+                if (nums[lo] + nums[hi] < target) {
                     do {
-                        left++;
-                    } while (left < right && nums[left] == nums[left - 1]);
-                else if (nums[left] + nums[right] > target)
+                        lo++;
+                    } while (lo < hi && nums[lo] == nums[lo - 1]);
+                } else {// >= target
+                    if (nums[lo] + nums[hi] == target) {
+                        List<Integer> tmp = new ArrayList<>();
+                        tmp.add(nums[lo]);
+                        tmp.add(nums[hi]);
+                        res.add(tmp);
+                    }
                     do {
-                        right--;
-                    } while (left < right && nums[right] == nums[right + 1]);
-                else {
-                    List<Integer> temp = new ArrayList<>();
-                    temp.add(nums[left]);
-                    temp.add(nums[right]);
-                    res.add(temp);
-                    do {
-                        left++;
-                    } while (left < right && nums[left] == nums[left - 1]);
+                        hi--;
+                    } while (lo < hi && nums[hi] == nums[hi + 1]);
                 }
             }
-        } else {
-            int first = start;
-            while (first < nums.length - n + 1) {
-                if (minSum(nums, n, first) > target)
-                    break;
-                if (nums[first] + maxSum(nums, n - 1) >= target) {
-                    List<List<Integer>> pre_res = nSumRecursive(nums, target - nums[first], n - 1, first + 1);
-                    for (List<Integer> l : pre_res) {
-                        l.add(0, nums[first]);
-                        res.add(l);
-                    }
+        } else {// n sum
+            int start = index;
+            while (start <= len - n) {
+                List<List<Integer>> tmp = nSum(nums, target - nums[start], n - 1, start + 1);
+                for (List<Integer> a : tmp) {
+                    a.add(nums[start]);
+                    res.add(a);
                 }
                 do {
-                    first++;
-                } while (first < nums.length - n + 1 && nums[first] == nums[first - 1]);
+                    start++;
+                } while (start <= len - n && nums[start] == nums[start - 1]);
             }
         }
         return res;
     }
 
-    public List<List<Integer>> nSum(int[] nums, int target, int n) {
-        Arrays.sort(nums);
-        if (n < 2 || nums.length < n || maxSum(nums, n) < target)
-            return new ArrayList<>();
-        return nSumRecursive(nums, target, n, 0);
-    }
-
     public static void main(String[] args) {
-        System.out.println(new NSum().nSum(new int[]{
-                1, 1, 0, -1, -3, 0, -2
-        }, -2, 4));
+        int[] a = new int[]{1, 1, 0, -1, -3, 0, -2};
+        Arrays.sort(a);
+        System.out.println(new NSum().nSum(a));
     }
 }
