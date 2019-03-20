@@ -25,29 +25,3 @@ public class UniquePaths2 {
         System.out.println(new UniquePaths2().uniquePathsWithObstacles(new int[][]{{1}}));
     }
 }
-
-class UniquePaths2Naive {
-    private int totalPathCount;
-
-    private void findPathRecursive(int[][] map, int currX, int currY) {
-        if (currX == map.length - 1 && currY == map[0].length - 1 && map[currX][currY] == 0)
-            totalPathCount++;
-        if (currX < map.length - 1 && map[currX + 1][currY] == 0)
-            findPathRecursive(map, currX + 1, currY);
-        if (currY < map[0].length - 1 && map[currX][currY + 1] == 0)
-            findPathRecursive(map, currX, currY + 1);
-    }
-
-    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-        int row = obstacleGrid.length, col = obstacleGrid[0].length;
-        totalPathCount = 0;
-        if (obstacleGrid[0][0] == 1)
-            return 0;
-        findPathRecursive(obstacleGrid, 0, 0);
-        return totalPathCount;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new UniquePaths2().uniquePathsWithObstacles(new int[][]{{0, 0, 0}, {0, 1, 0}, {0, 0, 0}}));
-    }
-}
