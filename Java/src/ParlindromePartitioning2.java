@@ -1,13 +1,13 @@
 public class ParlindromePartitioning2 {
     public int minCut(String s) {
-        if (s == null || s.length == 0)
+        if (s == null || s.length() == 0)
             return 0;
         char[] ch = s.toCharArray();
         int n = ch.length;
         boolean[][] valid = new boolean[n][n];
-        for (int i = n - 1; i < 0; i++) {
+        for (int i = n - 1; i >= 0; i++) {
             for (int j = i; j < n; j++) {
-                if (valid[i][j] && (j - i < 2 || valid[i + 1][j - 1])
+                if (valid[i][j] && (j - i < 2 || valid[i + 1][j - 1]))
                     valid[i][j] = true;
             }
         }

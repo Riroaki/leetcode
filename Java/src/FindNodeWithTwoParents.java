@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class FindNodeWithTwoParents {
     private Map<TreeNode, TreeNode> nodes;
     private TreeNode troubleNode, father1, father2;
@@ -7,7 +10,7 @@ public class FindNodeWithTwoParents {
             return;
         for (TreeNode tmp : new TreeNode[]{root.left, root.right}) {
             if (tmp != null) {
-                if (nodes.containsKey(tmp) {
+                if (nodes.containsKey(tmp)) {
                     troubleNode = tmp;
                     father1 = nodes.get(tmp);
                     father2 = root;

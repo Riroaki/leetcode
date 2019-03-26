@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class GenerateParentheses {
     List<String> res;
     char[] word;
@@ -13,7 +16,7 @@ public class GenerateParentheses {
 
     private void helper(int left, int right) {
         if (left == bound && right == bound) {
-            res.add(String.valueOf(word);
+            res.add(String.valueOf(word));
             return;
         }
         if (left < bound) {
